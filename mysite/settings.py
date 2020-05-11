@@ -25,7 +25,7 @@ SECRET_KEY = '1bdznfa)01-8kwi1t)zdim74r8a4dd*_k28*%j!sq_aw)4k--l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bookmark.apps.BookmarkConfig', # 추가
 ]
 
 MIDDLEWARE = [
@@ -103,15 +104,22 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
+"""
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
+USE_TZ = True
+"""
+LANGUAGE_CODE = 'ko-kr'
+
+TIME_ZONE = 'Asia/Seoul'
+
+USE_TZ = False
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
