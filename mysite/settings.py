@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bookmark.apps.BookmarkConfig',     # 추가
     'blog.apps.BlogConfig',             # 추가
+    'taggit.apps.TaggitAppConfig',      # 추가
+    'taggit_templatetags2',             # 추가
 ]
 
 MIDDLEWARE = [
@@ -120,9 +122,6 @@ USE_I18N = True
 
 USE_L10N = True
 
-
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
@@ -130,3 +129,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+# 추가
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+TAGGIT_CASE_INSENSITIVE = True
+TAGGIT_LIMIT = 50
